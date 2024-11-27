@@ -41,6 +41,7 @@ class NotesApp {
 
     private fun selectNote(archive: Int, note: Int){
         val noteMenu = """
+            
             -- Архив "${archives[archive].name}". Заметка "${archives[archive].notes[note].nameNote}" --
             -- Текст заметки: ${archives[archive].notes[note].textNote} --
                           
@@ -84,7 +85,7 @@ class NotesApp {
         }
 
         else {
-            menu+="\n-- Меню --0\n0. Создать архив заметок"
+            menu+="\n-- Меню --\n0. Создать архив заметок"
             for (i in 0 until archives.size) {
                 menu+="\n${i + 1}. Архив \"${archives[i].name}\""
             }
